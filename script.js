@@ -28,21 +28,27 @@ function sumAll(bot, top) {
     return sum;
 };
 
-function leapYears() {
-
+function leapYears(year) {
+    if ((year % 4 === 0) && (!(year % 100 === 0) || (year % 400 === 0))) {
+        return true;
+    }
+    else {
+        return false;
+    }
 };
 
-function convertToCelsius() {
+function convertToCelsius(f) {
+    return Math.round((f - 32) * (5 / 9) * 10) / 10;
 };
 
-function convertToFahrenheit() {
+function convertToFahrenheit(c) {
+    return Math.round(((c * 9) / 5 + 32) * 10) / 10;
 };
 
 console.log(repeatString("hello", 5));
 console.log(reverseString("hello"));
 console.log(removeFromArray(['a', 'b', 'c'], 'a'));
 console.log(sumAll(1, 5));
-leapYears();
-convertToCelsius();
-convertToFahrenheit();
-
+console.log(leapYears(2028));
+console.log(convertToCelsius(94));
+console.log(convertToFahrenheit(34.4));
