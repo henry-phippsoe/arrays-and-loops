@@ -10,8 +10,14 @@ function reverseString(str) {
     return str.split("").reverse().join("");
 };
 
-function removeFromArray() {
-
+function removeFromArray(array, args) {
+    let endArray = [];
+    array.forEach(element => {
+        if (!args.includes(element)) {
+            endArray.push(element);
+        }
+    });
+    return endArray;
 };
 
 function sumAll() {
@@ -30,7 +36,7 @@ function convertToFahrenheit() {
 
 console.log(repeatString("hello", 5));
 console.log(reverseString("hello"));
-removeFromArray();
+console.log(removeFromArray(['a', 'b', 'c'], 'a'));
 sumAll();
 leapYears();
 convertToCelsius();
