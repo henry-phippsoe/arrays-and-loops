@@ -20,8 +20,12 @@ function removeFromArray(array, args) {
     return endArray;
 };
 
-function sumAll() {
-
+function sumAll(bot, top) {
+    let sum = 0;
+    for (let i = bot; i <= top; i++) {
+        sum += i;
+    }
+    return sum;
 };
 
 function leapYears() {
@@ -37,7 +41,7 @@ function convertToFahrenheit() {
 console.log(repeatString("hello", 5));
 console.log(reverseString("hello"));
 console.log(removeFromArray(['a', 'b', 'c'], 'a'));
-sumAll();
+console.log(sumAll(1, 5));
 leapYears();
 convertToCelsius();
 convertToFahrenheit();
